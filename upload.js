@@ -8,16 +8,6 @@ const __dirname = path.dirname(__filename)
 
 const Dest = path.join(__dirname, 'uploads')
 
-const upload = multer({
-    storage: multer.diskStorage({
-        destination: (req, file, cb) => {
-            !fs.existsSync(Dest) && fs.mkdirSync(Dest)
-            cb(null, 'uploads/')
-        },
-        filename: (req, file, cb) => {
-            cb(null, Date.now() + path.extname(file.originalname))
-        },
-    }),
-})
+const upload = multer({ dest: 'uploads/' })
 
 export default upload
