@@ -2,8 +2,8 @@ import mongoose from 'mongoose'
 
 const { Schema } = mongoose
 
-const sceneSchema = new Schema({
-    sceneid: {
+const letterSchema = new Schema({
+    letterid: {
         type: String,
         required: true,
     },
@@ -11,10 +11,10 @@ const sceneSchema = new Schema({
         type: Number,
         required: true,
     },
-    scene: {
+    letter: {
         type: Object,
         required: true,
     },
 })
 
-export default mongoose.model.Scene || mongoose.model('Scene', sceneSchema)
+export default mongoose.model.letter || mongoose.model('Letter', letterSchema)
