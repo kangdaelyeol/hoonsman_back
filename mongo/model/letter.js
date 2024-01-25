@@ -11,6 +11,10 @@ const letterSchema = new Schema({
         type: Number,
         required: true,
     },
+    thumbnail: {
+        type: String,
+        required: true,
+    },
     letter: {
         type: Object,
         required: true,
